@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:first_project/difficulty.dart';
+import 'package:first_project/my_first_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -115,44 +117,8 @@ class _TaskState extends State<Task> {
                                 ),
                               )),
                         ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.star,
-                              size: 16,
-                              color: widget.difficulty >= 1
-                                  ? Colors.blue
-                                  : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 16,
-                              color: widget.difficulty >= 2
-                                  ? Colors.blue
-                                  : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 16,
-                              color: widget.difficulty >= 3
-                                  ? Colors.blue
-                                  : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 16,
-                              color: widget.difficulty >= 4
-                                  ? Colors.blue
-                                  : Colors.blue[100],
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 16,
-                              color: widget.difficulty >= 5
-                                  ? Colors.blue
-                                  : Colors.blue[100],
-                            ),
-                          ],
+                        Difficulty(
+                          difficultyLevel: widget.difficulty,
                         )
                       ],
                     ),
